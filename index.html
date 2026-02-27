@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alfred ZAMBO | Ingénieur Systèmes</title>
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+<header>
+    <div class="container">
+        <img src="img/tof.jpg" class="profile">
+        <h1>Alfred ZAMBO</h1>
+        <p>Ingénieur Systèmes & Infrastructures</p>
+    </div>
+</header>
+
+<nav>
+    <button onclick="openTab('about')">À propos</button>
+    <button onclick="openTab('projects')">Projets</button>
+    <button onclick="openTab('skills')">Compétences</button>
+    <button onclick="openTab('contact')">Contact</button>
+</nav>
+
+<section id="about" class="tab">
+    <h2>À propos</h2>
+    <p>
+        Ingénieur spécialisé en administration systèmes, sécurisation d’infrastructures
+        et supervision d’environnements critiques.
+    </p>
+</section>
+
+<section id="projects" class="tab">
+    <h2>Projets Stratégiques</h2>
+    <ul>
+        <li>🔐 Sécurisation DNS nationale (.cm) – DNSSEC</li>
+        <li>🏛 Commission technique TIC – Analyse projets publics</li>
+        <li>🗄 Déploiement SAN Fibre Optique</li>
+        <li>📊 Mise en place supervision Prometheus / Grafana</li>
+    </ul>
+</section>
+
+<section id="skills" class="tab">
+    <h2>Compétences</h2>
+    <div class="grid">
+        <div class="card">Administration Linux</div>
+        <div class="card">Virtualisation (VMware / Proxmox)</div>
+        <div class="card">Firewall & Sécurité</div>
+        <div class="card">Monitoring</div>
+    </div>
+</section>
+
+<section id="contact" class="tab">
+    <h2>Contact</h2>
+    <p>Email : yohanzambo.28@gmail.com</p>
+</section>
+
+<script>
+function openTab(tabId) {
+    var tabs = document.getElementsByClassName("tab");
+    for (var i = 0; i < tabs.length; i++) {
+        tabs[i].style.display = "none";
+    }
+    document.getElementById(tabId).style.display = "block";
+}
+
+openTab("about");
+</script>
+
+</body>
+</html>
