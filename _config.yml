@@ -1,0 +1,100 @@
+title: "ZAMBO Alfred Yohann E | Systems & Infrastructure Engineer"
+description: "Infrastructure • Systems Administration • Network Architecture • Security • Monitoring"
+url: "https://yohanzambo.github.io"
+baseurl: ""
+
+author:
+  name: "ZAMBO Alfred Yohann Emmanuel"
+  email: "yohanzambo.28@gmail.com"
+  location: "Yaoundé, Cameroon"
+
+# ----------------------------------------
+# Theme
+# ----------------------------------------
+
+remote_theme: "mmistakes/minimal-mistakes"
+
+minimal_mistakes_skin: "dark"   # Options: default, dark, neon, sunrise, aqua
+
+# ----------------------------------------
+# Plugins (GitHub Pages compatible)
+# ----------------------------------------
+
+plugins:
+  - jekyll-include-cache
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-feed
+
+# ----------------------------------------
+# SEO & Social
+# ----------------------------------------
+
+github:
+  username: yohanzambo
+
+social:
+  type: Person
+  name: ZAMBO Alfred Yohann Emmanuel
+  links:
+    - https://github.com/yohanzambo
+    - https://www.linkedin.com/in/alfred-y-zambo-8359311a1
+
+# ----------------------------------------
+# Appearance
+# ----------------------------------------
+
+markdown: kramdown
+highlighter: rouge
+permalink: /:categories/:title/
+
+# Enable breadcrumbs
+breadcrumbs: true
+
+# Show reading time
+read_time: true
+
+# Show share buttons
+share: true
+
+# Enable search
+search: true
+
+# ----------------------------------------
+# Defaults
+# ----------------------------------------
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+      author_profile: true
+      read_time: true
+      comments: false
+      share: true
+
+# ----------------------------------------
+# Navigation Menu
+# ----------------------------------------
+
+header_pages:
+  - index.md
+  - about.md
+  - projects.md
+  - certifications.md
+  - contact.md
+
+# ----------------------------------------
+# Footer
+# ----------------------------------------
+
+footer:
+  links:
+    - label: "GitHub"
+      icon: "fab fa-github"
+      url: "https://github.com/yohanzambo"
+    - label: "LinkedIn"
+      icon: "fab fa-linkedin"
+      url: "https://linkedin.com/in/alfred-y-zambo-8359311a1"
