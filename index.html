@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Alfred ZAMBO | Ingénieur Systèmes & Infrastructures</title>
+<title>ZAMBO Alfred Yohann E. | Systems & Infrastructure Engineer</title>
 <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
@@ -11,161 +11,375 @@
 
 <header>
     <img src="img/tof.jpg" class="profile">
-    <h1>Alfred ZAMBO</h1>
+    <h1>ZAMBO Alfred Yohann E.</h1>
 
     <p class="subtitle fr">
-        Ingénieur Systèmes & Infrastructures spécialisé en sécurisation,
-        virtualisation et supervision d’environnements critiques.
+        Ingénieur SysOps & NoC, spécialisé en sécurisation,
+        administration et supervision d'infrastructures IT.
     </p>
-
     <p class="subtitle en">
-        Systems & Infrastructure Engineer specialized in security,
-        virtualization and critical infrastructure monitoring.
+        SysOps & NoC Engineer, specialized in security hardening,
+        administration and IT infrastructures monitoring.
     </p>
 
     <div class="socials">
         <a href="https://wa.me/237694904503" target="_blank">WhatsApp</a>
-        <a href="https://linkedin.com/in/TON-LINKEDIN" target="_blank">LinkedIn</a>
-        <a href="https://facebook.com/TON-FACEBOOK" target="_blank">Facebook</a>
+        <a href="https://linkedin.com/in/alfred-y-zambo-8359311a1" target="_blank">LinkedIn</a>
         <a href="mailto:yohanzambo.28@gmail.com">Email</a>
     </div>
 
     <a href="cv/Alfred_ZAMBO_CV.pdf" class="cv-btn" target="_blank">
-        📄 Télécharger CV
+        📄 <span class="fr">Télécharger CV</span><span class="en">Download CV</span>
     </a>
 
     <button onclick="toggleLang()" class="lang-btn">FR / EN</button>
 </header>
 
 <nav>
-    <button onclick="openTab('about')">À propos</button>
-    <button onclick="openTab('projects')">Projets</button>
-    <button onclick="openTab('skills')">Compétences</button>
-    <button onclick="openTab('certifications')">Certifications</button>
-    <button onclick="openTab('experience')">Expérience</button>
+    <button onclick="openTab('about')" id="nav-about">
+        <span class="fr">À propos</span><span class="en">About</span>
+    </button>
+    <button onclick="openTab('experience')" id="nav-experience">
+        <span class="fr">Expérience</span><span class="en">Experience</span>
+    </button>
+    <button onclick="openTab('projects')" id="nav-projects">
+        <span class="fr">Projets</span><span class="en">Projects</span>
+    </button>
+    <button onclick="openTab('skills')" id="nav-skills">
+        <span class="fr">Compétences</span><span class="en">Skills</span>
+    </button>
+    <button onclick="openTab('certifications')" id="nav-certifications">
+        <span class="fr">Certifications</span><span class="en">Certifications</span>
+    </button>
 </nav>
 
-<!-- A PROPOS -->
+<!-- ================= A PROPOS ================= -->
 <section id="about" class="tab">
+  <h2 class="fr">Informations Personnelles</h2>
+  <h2 class="en">Personal Information</h2>
 
-<h2>À propos</h2>
+  <div class="fr">
+    <p><strong>Âge :</strong> 26 ans</p>
+    <p><strong>Situation matrimoniale :</strong> Célibataire</p>
+    <p><strong>Adresse :</strong> Etoudi, Yaoundé – Cameroun</p>
+    <p><strong>Téléphone :</strong> +237 6 94 90 45 03</p>
+    <p><strong>Email :</strong> <a href="mailto:yohanzambo.28@gmail.com">yohanzambo.28@gmail.com</a></p>
+  </div>
 
-<p>
-Âge : 25 ans<br>
-Situation matrimoniale : Célibataire<br>
-Adresse : Etoudi, Yaoundé – Cameroun<br>
-Téléphone : +237 6 94 90 45 03
-</p>
-
-<p>
-Administrateur Systèmes – NoC & SysOps à l’Agence Nationale des Technologies de l’Information et de la Communication (ANTIC).
-Je contribue à la gestion d’infrastructures critiques nationales incluant virtualisation,
-sécurisation réseau, supervision multi-services, stockage SAN et gouvernance technique.
-</p>
-
-<p>
-Expertise en administration Linux, gestion d’environnements virtualisés (VMware / Proxmox),
-déploiement de solutions de supervision (Prometheus, Grafana, Nagios),
-gestion des sauvegardes, sécurisation réseau (VLAN, Firewall, IPS, VPN)
-et automatisation via Bash & Ansible.
-</p>
-
+  <div class="en">
+    <p><strong>Age:</strong> 26 years old</p>
+    <p><strong>Marital status:</strong> Single</p>
+    <p><strong>Location:</strong> Etoudi, Yaoundé – Cameroon</p>
+    <p><strong>Phone:</strong> +237 6 94 90 45 03</p>
+    <p><strong>Email:</strong> <a href="mailto:yohanzambo.28@gmail.com">yohanzambo.28@gmail.com</a></p>
+  </div>
 </section>
 
-<!-- PROJETS -->
-<section id="projects" class="tab">
-
-<h2>Projets Stratégiques</h2>
-
-<ul>
-<li>🔐 Déploiement DNSSEC sur le ccTLD ".cm" en collaboration avec l’ICANN</li>
-<li>🗄 Déploiement et configuration SAN Fibre Optique</li>
-<li>🏛 Membre de commission technique – Analyse projets TIC publics</li>
-<li>📊 Déploiement supervision centralisée multi-serveurs</li>
-<li>🖥 Conception d’infrastructure virtualisée haute disponibilité</li>
-</ul>
-
-</section>
-
-<!-- COMPETENCES -->
-<section id="skills" class="tab">
-
-<h2>Compétences Techniques</h2>
-
-<div class="skill" data-percent="90">
-<span>Administration Linux & Hardening</span>
-<div class="bar"><div class="progress"></div></div>
-</div>
-
-<div class="skill" data-percent="85">
-<span>Virtualisation (VMware / Proxmox)</span>
-<div class="bar"><div class="progress"></div></div>
-</div>
-
-<div class="skill" data-percent="88">
-<span>Sécurité Réseau & Firewall</span>
-<div class="bar"><div class="progress"></div></div>
-</div>
-
-<div class="skill" data-percent="87">
-<span>Supervision & Monitoring</span>
-<div class="bar"><div class="progress"></div></div>
-</div>
-
-<div class="skill" data-percent="80">
-<span>Automatisation (Bash / Ansible)</span>
-<div class="bar"><div class="progress"></div></div>
-</div>
-
-</section>
-
-<!-- CERTIFICATIONS -->
-<section id="certifications" class="tab">
-
-<h2>Certifications</h2>
-
-<div class="cert-grid">
-<div class="cert">CCNA</div>
-<div class="cert">ISO 27001 Lead Implementer</div>
-<div class="cert">LPI-1</div>
-<div class="cert">AWS Cloud Practitioner</div>
-<div class="cert">AWS AI Practitioner</div>
-</div>
-
-</section>
-
-<!-- EXPERIENCE -->
+<!-- ================= EXPERIENCE ================= -->
 <section id="experience" class="tab">
+  <h2 class="fr">Expérience Professionnelle</h2>
+  <h2 class="en">Professional Experience</h2>
+  <div class="timeline">
 
-<h2>Expérience</h2>
+    <div class="timeline-item">
+      <h3>Février 2022 – Présent</h3>
+      <p class="fr">
+        <strong>Cadre Technique – ANTIC</strong> (Agence Nationale des Technologies de l'Information et de la Communication)
+      </p>
+      <p class="en">
+        <strong>Technical Officer – ANTIC</strong> (National Agency for Information and Communication Technologies)
+      </p>
+      <p class="fr">En service à la Cellule des Systèmes d'Information (CSI).</p>
+      <p class="en">Assigned to the Information Systems Unit (CSI).</p>
+    </div>
 
-<div class="timeline">
+    <div class="timeline-item">
+      <h3>2021</h3>
+      <p class="fr"><strong>Stagiaire – Aéroports Du Cameroun (ADC)</strong></p>
+      <p class="en"><strong>Intern – Aéroports Du Cameroun (ADC)</strong></p>
+      <p class="fr">
+        Stage effectué au sein de la centrale électrique. Participation à la mise en place
+        et à l'utilisation de la Gestion de Maintenance Assistée par Ordinateur (GMAO)
+        pour le suivi et la planification des opérations de maintenance.
+      </p>
+      <p class="en">
+        Internship within the power plant department. Involvement in the implementation
+        and use of a Computerized Maintenance Management System (CMMS)
+        for maintenance tracking and planning.
+      </p>
+    </div>
 
-<div class="timeline-item">
-<h3>2022 – Présent</h3>
-<p>Administrateur Système – ANTIC</p>
-</div>
+  </div>
+</section>
 
-<div class="timeline-item">
-<h3>2021</h3>
-<p>Maintenance Opérationnelle – ADC</p>
-</div>
+<!-- ================= PROJETS ================= -->
+<section id="projects" class="tab">
+  <h2 class="fr">Projets</h2>
+  <h2 class="en">Projects</h2>
 
-</div>
+  <div class="fr">
+    <h3>P1 - Sécurisation de l'infrastructure DNS nationale - ccTLD ".cm"</h3>
+    <p>Déploiement de la signature cryptographique DNSSEC sur le ccTLD ".cm" en coordination avec l'ICANN et le registre national.</p>
+    <ul>
+      <li>Implémentation de la chaîne de confiance</li>
+      <li>Gestion des clés cryptographiques (KSK / ZSK)</li>
+      <li>Tests de validation DNSSEC et supervision continue</li>
+      <li>Renforcement de l'intégrité du domaine national</li>
+    </ul>
 
+    <h3>P2 - Segmentation et sécurisation du réseau intranet de l'ANTIC</h3>
+    <p>Restructuration et sécurisation du réseau intranet de l'ANTIC à l'aide de commutateurs Cisco C9300, pare-feu FortiGate et points d'accès Ruckus pour garantir l'isolation des flux et la maîtrise des accès.</p>
+    <ul>
+      <li>Segmentation du réseau en VLANs sur commutateurs Cisco Catalyst C9300</li>
+      <li>Configuration des politiques de sécurité et règles de filtrage sur FortiGate</li>
+      <li>Mise en place de l'IPS, antivirus et contrôle applicatif sur FortiGate</li>
+      <li>Gestion et optimisation de la bande passante internet (QoS / traffic shaping)</li>
+      <li>Analyse et supervision des logs de sécurité via FortiAnalyzer</li>
+      <li>Déploiement et gestion du réseau sans fil avec les équipements Ruckus</li>
+    </ul>
+
+    <h3>P3 - Rédaction de la documentation technique du réseau intranet</h3>
+    <p>Rédaction d'une documentation technique complète du réseau intranet de l'ANTIC couvrant l'ensemble des configurations déployées pour assurer la continuité de service et faciliter le dépannage.</p>
+    <ul>
+      <li>Documentation de l'architecture réseau et du plan d'adressage</li>
+      <li>Rédaction des procédures de configuration des équipements (Cisco C9300, FortiGate, Ruckus)</li>
+      <li>Élaboration des guides de dépannage et de résolution d'incidents</li>
+      <li>Mise en place d'une base de connaissance pour assurer la continuité de service</li>
+    </ul>
+
+    <h3>P4 - Déploiement d'applications en production avec Docker et reverse proxy</h3>
+    <p>Mise en production des applications développées en interne via une infrastructure conteneurisée Docker, exposées et sécurisées à travers des reverse proxies.</p>
+    <ul>
+      <li>Conteneurisation et déploiement des applications avec Docker et Docker Compose</li>
+      <li>Configuration des reverse proxies (Nginx / Traefik) pour l'exposition des services</li>
+      <li>Gestion des certificats SSL et sécurisation des accès applicatifs</li>
+      <li>Coordination avec les développeurs pour les mises en production et rollbacks</li>
+    </ul>
+
+    <h3>P5 - Mise à niveau de l'infrastructure vSphere de l'ANTIC</h3>
+    <p>Mise à niveau et modernisation de l'infrastructure de virtualisation vSphere pour améliorer les performances, la stabilité et la gestion des machines virtuelles.</p>
+    <ul>
+      <li>Mise à jour des hôtes ESXi vers la dernière version stable</li>
+      <li>Migration et consolidation des machines virtuelles</li>
+      <li>Optimisation des ressources CPU, RAM et stockage</li>
+      <li>Renforcement de la haute disponibilité (HA) et du DRS</li>
+    </ul>
+
+    <h3>P6 - Déploiement de stockage centralisé - SAN HPE MSA 2060/2050</h3>
+    <p>Mise en place d'une infrastructure de stockage haute performance HPE MSA interconnectée en fibre optique pour centraliser et sécuriser les données.</p>
+    <ul>
+      <li>Configuration du zoning Fibre Channel et LUN mapping</li>
+      <li>Intégration avec l'hyperviseur vSphere</li>
+      <li>Optimisation des performances I/O et de la bande passante</li>
+      <li>Amélioration de la disponibilité et de la résilience des services</li>
+    </ul>
+
+    <h3>P7 - Déploiement d'une solution de sauvegarde et de réplication de l'infrastructure vSphere</h3>
+    <p>Mise en place d'une stratégie de sauvegarde et de réplication des machines virtuelles vSphere pour garantir la continuité de service et la reprise après sinistre.</p>
+    <ul>
+      <li>Déploiement et configuration de Veeam Backup & Replication</li>
+      <li>Définition des politiques de sauvegarde (RPO / RTO)</li>
+      <li>Réplication des VMs critiques vers un site secondaire</li>
+      <li>Tests de restauration et validation des sauvegardes</li>
+    </ul>
+
+    <h3>P8 - Administration Active Directory et gestion du parc informatique</h3>
+    <p>Administration de l'annuaire Active Directory et mise en place d'une solution centralisée de gestion du parc informatique et des incidents avec GLPI.</p>
+    <ul>
+      <li>Gestion des comptes utilisateurs, groupes et unités d'organisation (OU)</li>
+      <li>Création et déploiement des stratégies de groupe (GPO)</li>
+      <li>Déploiement et configuration de GLPI pour la gestion du parc informatique</li>
+      <li>Mise en place du helpdesk et gestion des incidents via GLPI</li>
+    </ul>
+
+    <h3>P9 - Automatisation de l'infrastructure avec Ansible et Bash</h3>
+    <p>Mise en place d'une automatisation des tâches d'administration et de déploiement de l'infrastructure via Ansible et des scripts Bash.</p>
+    <ul>
+      <li>Écriture de playbooks Ansible pour le déploiement des serveurs</li>
+      <li>Automatisation des mises à jour et des configurations système</li>
+      <li>Développement de scripts Bash pour les tâches récurrentes</li>
+      <li>Réduction du temps de déploiement et des erreurs humaines</li>
+    </ul>
+
+    <h3>P10 - Mise en place d'une plateforme de monitoring et d'alertes</h3>
+    <p>Déploiement d'une plateforme de supervision de l'infrastructure basée sur Prometheus, Grafana et Nagios pour assurer une visibilité en temps réel des services.</p>
+    <ul>
+      <li>Déploiement et configuration de Prometheus & Grafana</li>
+      <li>Mise en place de tableaux de bord de supervision personnalisés</li>
+      <li>Configuration de Nagios avec scripts Bash pour les checks personnalisés</li>
+      <li>Mise en place d'un système d'alerting sur les seuils critiques</li>
+    </ul>
+
+    <h3>P11 - Déploiement d'un cluster Proxmox et migration depuis vSphere</h3>
+    <p>Déploiement d'un cluster Proxmox VE en environnement de test pour évaluer et préparer la migration des machines virtuelles depuis l'infrastructure vSphere existante.</p>
+    <ul>
+      <li>Installation et configuration du cluster Proxmox VE</li>
+      <li>Tests de migration des VMs vSphere vers Proxmox</li>
+      <li>Comparaison des performances entre les deux hyperviseurs</li>
+      <li>Documentation des procédures de migration et des écarts techniques</li>
+    </ul>
+  </div>
+
+  <div class="en">
+    <h3>P1 - Securing the National DNS Infrastructure - ccTLD ".cm"</h3>
+    <p>Deployment of DNSSEC cryptographic signing on the ".cm" ccTLD in coordination with ICANN and the national registry.</p>
+    <ul>
+      <li>Implementation of the chain of trust</li>
+      <li>Cryptographic key management (KSK / ZSK)</li>
+      <li>DNSSEC validation tests and continuous monitoring</li>
+      <li>Strengthening the integrity of the national domain</li>
+    </ul>
+
+    <h3>P2 - Segmentation and Security of ANTIC's Intranet Network</h3>
+    <p>Restructuring and securing ANTIC's intranet using Cisco C9300 switches, FortiGate firewall and Ruckus access points to ensure traffic isolation and access control.</p>
+    <ul>
+      <li>Network segmentation into VLANs on Cisco Catalyst C9300 switches</li>
+      <li>Security policies and filtering rules configuration on FortiGate</li>
+      <li>IPS, antivirus and application control setup on FortiGate</li>
+      <li>Internet bandwidth management and optimization (QoS / traffic shaping)</li>
+      <li>Security log analysis and monitoring via FortiAnalyzer</li>
+      <li>Wireless network deployment and management with Ruckus equipment</li>
+    </ul>
+
+    <h3>P3 - Technical Documentation of the Intranet Network</h3>
+    <p>Writing of complete technical documentation for ANTIC's intranet network covering all deployed configurations to ensure service continuity and facilitate troubleshooting.</p>
+    <ul>
+      <li>Network architecture and addressing plan documentation</li>
+      <li>Equipment configuration procedures (Cisco C9300, FortiGate, Ruckus)</li>
+      <li>Troubleshooting and incident resolution guides</li>
+      <li>Knowledge base setup to ensure service continuity</li>
+    </ul>
+
+    <h3>P4 - Production Deployment with Docker and Reverse Proxy</h3>
+    <p>Deploying internally developed applications via a containerized Docker infrastructure, exposed and secured through reverse proxies.</p>
+    <ul>
+      <li>Application containerization and deployment with Docker and Docker Compose</li>
+      <li>Reverse proxy configuration (Nginx / Traefik) for service exposure</li>
+      <li>SSL certificate management and application access security</li>
+      <li>Coordination with developers for production deployments and rollbacks</li>
+    </ul>
+
+    <h3>P5 - vSphere Infrastructure Upgrade</h3>
+    <p>Upgrading and modernizing the vSphere virtualization infrastructure to improve performance, stability and virtual machine management.</p>
+    <ul>
+      <li>ESXi host update to the latest stable version</li>
+      <li>Virtual machine migration and consolidation</li>
+      <li>CPU, RAM and storage resource optimization</li>
+      <li>High Availability (HA) and DRS reinforcement</li>
+    </ul>
+
+    <h3>P6 - Centralized Storage Deployment - SAN HPE MSA 2060/2050</h3>
+    <p>Deployment of a high-performance HPE MSA storage infrastructure interconnected via fiber optic to centralize and secure data.</p>
+    <ul>
+      <li>Fibre Channel zoning and LUN mapping configuration</li>
+      <li>Integration with vSphere hypervisor</li>
+      <li>I/O performance and bandwidth optimization</li>
+      <li>Improved service availability and resilience</li>
+    </ul>
+
+    <h3>P7 - Backup and Replication Solution for vSphere Infrastructure</h3>
+    <p>Implementation of a backup and replication strategy for vSphere virtual machines to ensure service continuity and disaster recovery.</p>
+    <ul>
+      <li>Veeam Backup & Replication deployment and configuration</li>
+      <li>Backup policy definition (RPO / RTO)</li>
+      <li>Critical VM replication to a secondary site</li>
+      <li>Restore tests and backup validation</li>
+    </ul>
+
+    <h3>P8 - Active Directory Administration and IT Asset Management</h3>
+    <p>Administration of the Active Directory and deployment of a centralized IT asset and incident management solution with GLPI.</p>
+    <ul>
+      <li>User accounts, groups and organizational units (OU) management</li>
+      <li>Group Policy Objects (GPO) creation and deployment</li>
+      <li>GLPI deployment and configuration for IT asset management</li>
+      <li>Helpdesk setup and incident management via GLPI</li>
+    </ul>
+
+    <h3>P9 - Infrastructure Automation with Ansible and Bash</h3>
+    <p>Automating administration and deployment tasks across the infrastructure using Ansible playbooks and Bash scripts.</p>
+    <ul>
+      <li>Ansible playbook writing for server deployment</li>
+      <li>Automated system updates and configuration management</li>
+      <li>Bash script development for recurring tasks</li>
+      <li>Reduced deployment time and human errors</li>
+    </ul>
+
+    <h3>P10 - Monitoring and Alerting Platform</h3>
+    <p>Deployment of an infrastructure monitoring platform based on Prometheus, Grafana and Nagios for real-time service visibility.</p>
+    <ul>
+      <li>Prometheus & Grafana deployment and configuration</li>
+      <li>Custom monitoring dashboards setup</li>
+      <li>Nagios configuration with Bash scripts for custom checks</li>
+      <li>Intelligent alerting system on critical thresholds</li>
+    </ul>
+
+    <h3>P11 - Proxmox Cluster Deployment and Migration from vSphere</h3>
+    <p>Deployment of a Proxmox VE cluster in a test environment to evaluate and prepare virtual machine migration from the existing vSphere infrastructure.</p>
+    <ul>
+      <li>Proxmox VE cluster installation and configuration</li>
+      <li>vSphere to Proxmox VM migration tests</li>
+      <li>Performance comparison between both hypervisors</li>
+      <li>Migration procedures and technical gap documentation</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ================= COMPETENCES ================= -->
+<section id="skills" class="tab">
+  <h2 class="fr">Compétences Techniques</h2>
+  <h2 class="en">Technical Skills</h2>
+
+  <div class="skill" data-percent="90">
+    <span>Administration système & Hardening</span>
+    <div class="bar"><div class="progress"></div></div>
+  </div>
+  <div class="skill" data-percent="85">
+    <span>Virtualisation & Infrastructure</span>
+    <div class="bar"><div class="progress"></div></div>
+  </div>
+  <div class="skill" data-percent="88">
+    <span>Administration réseau & Cybersécurité</span>
+    <div class="bar"><div class="progress"></div></div>
+  </div>
+  <div class="skill" data-percent="86">
+    <span>Supervision & Monitoring</span>
+    <div class="bar"><div class="progress"></div></div>
+  </div>
+  <div class="skill" data-percent="80">
+    <span>Automatisation & Intégration</span>
+    <div class="bar"><div class="progress"></div></div>
+  </div>
+  <div class="skill" data-percent="82">
+    <span>Rédaction technique & Gestion de projets</span>
+    <div class="bar"><div class="progress"></div></div>
+  </div>
+</section>
+
+<!-- ================= CERTIFICATIONS ================= -->
+<section id="certifications" class="tab">
+  <h2 class="fr">Certifications</h2>
+  <h2 class="en">Certifications</h2>
+
+  <div class="cert-grid">
+    <div class="cert">CCNA</div>
+    <div class="cert">ISO 27001 Lead Implementer</div>
+    <div class="cert">LPI-1</div>
+    <div class="cert">AWS Cloud Practitioner</div>
+    <div class="cert">AWS AI Practitioner</div>
+  </div>
 </section>
 
 <script>
-function openTab(tabId) {
-    var tabs = document.getElementsByClassName("tab");
-    for (var i = 0; i < tabs.length; i++) {
-        tabs[i].style.display = "none";
-    }
-    document.getElementById(tabId).style.display = "block";
+// État de la langue : 'fr' par défaut
+let currentLang = 'fr';
 
-    animateSkills();
+function openTab(tabId) {
+    document.querySelectorAll(".tab").forEach(tab => tab.style.display = "none");
+    document.querySelectorAll("nav button").forEach(btn => btn.classList.remove("active"));
+    document.getElementById(tabId).style.display = "block";
+    document.getElementById("nav-" + tabId).classList.add("active");
+    if (tabId === 'skills') animateSkills();
 }
-openTab("about");
 
 function animateSkills() {
     document.querySelectorAll(".skill").forEach(skill => {
@@ -175,9 +389,18 @@ function animateSkills() {
 }
 
 function toggleLang() {
-    document.querySelectorAll(".fr").forEach(el => el.style.display = "none");
-    document.querySelectorAll(".en").forEach(el => el.style.display = "block");
+    currentLang = currentLang === 'fr' ? 'en' : 'fr';
+    const showLang = currentLang;
+    const hideLang = currentLang === 'fr' ? 'en' : 'fr';
+
+    document.querySelectorAll("." + showLang).forEach(el => el.style.display = "block");
+    document.querySelectorAll("." + hideLang).forEach(el => el.style.display = "none");
 }
+
+// Initialisation
+openTab('about');
+// Cacher les éléments EN au démarrage
+document.querySelectorAll(".en").forEach(el => el.style.display = "none");
 </script>
 
 </body>
