@@ -1,430 +1,794 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ZAMBO Alfred Yohann E. | Systems & Infrastructure Engineer</title>
-<link rel="stylesheet" href="assets/css/style.css">
-</head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="ZAMBO Alfred Yohann — Ingénieur SysOps & NoC, spécialisé en sécurisation, administration et supervision d'infrastructures IT. ANTIC Cameroun.">
+  <meta property="og:title" content="ZAMBO Alfred Yohann | SysOps & Infrastructure Engineer">
+  <meta property="og:description" content="SysOps & NoC Engineer — Réseaux, Cybersécurité, Virtualisation, Automatisation. CCNA · Fortinet FCP · DNSSEC.">
+  <meta property="og:type" content="website">
+  <title>ZAMBO Alfred Yohann | SysOps & Infrastructure Engineer</title>
 
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <link rel="stylesheet" href="portefolio-css.css">
+</head>
 <body>
 
+<!-- Matrix background -->
+<canvas id="bg-canvas"></canvas>
+
+<!-- ══ HEADER ══ -->
 <header>
-    <img src="img/tof.jpg" class="profile">
-    <h1>ZAMBO Alfred Yohann E.</h1>
+  <div class="header-inner">
+    <div class="header-top">
 
-    <p class="subtitle fr">
-        Ingénieur SysOps & NoC, spécialisé en sécurisation,
-        administration et supervision d'infrastructures IT.
-    </p>
-    <p class="subtitle en">
-        SysOps & NoC Engineer, specialized in security hardening,
-        administration and IT infrastructures monitoring.
-    </p>
+      <div class="profile-wrap">
+        <div class="profile-ring"></div>
+        <img src="img/tof.jpg" class="profile" alt="Photo de profil — ZAMBO Alfred Yohann">
+      </div>
 
-    <div class="socials">
-        <a href="https://wa.me/237694904503" target="_blank">WhatsApp</a>
-        <a href="https://linkedin.com/in/alfred-y-zambo-8359311a1" target="_blank">LinkedIn</a>
-        <a href="mailto:yohanzambo.28@gmail.com">Email</a>
+      <div class="header-info">
+        <div class="terminal-line">
+          <span class="prompt">sysops@antic:~$</span><span class="cmd"> whoami</span><span class="cursor">█</span>
+        </div>
+        <h1>ZAMBO Alfred Yohann E.</h1>
+        <p class="subtitle fr">Ingénieur SysOps &amp; NoC — Sécurisation, administration et supervision d'infrastructures IT</p>
+        <p class="subtitle en">SysOps &amp; NoC Engineer — Security hardening, administration and IT infrastructure monitoring</p>
+        <div class="role-badges">
+          <span class="rbadge rbadge-net"><i class="fa fa-network-wired"></i> Network</span>
+          <span class="rbadge rbadge-sec"><i class="fa fa-shield-halved"></i> CyberSec</span>
+          <span class="rbadge rbadge-sys"><i class="fa fa-server"></i> SysOps</span>
+          <span class="rbadge rbadge-auto"><i class="fa fa-gears"></i> Automation</span>
+        </div>
+      </div>
     </div>
 
-    <a href="CV/CV-ZAMBO-1.pdf" class="cv-btn" target="_blank">
-        📄 <span class="fr">Télécharger CV</span><span class="en">Download CV</span>
-    </a>
+    <div class="header-stats">
+      <div class="stat-item">
+        <span class="stat-num" data-target="4">0</span><span class="stat-plus">+</span>
+        <div class="stat-label fr">ans d'expérience</div>
+        <div class="stat-label en">years experience</div>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item">
+        <span class="stat-num" data-target="11">0</span>
+        <div class="stat-label fr">projets</div>
+        <div class="stat-label en">projects</div>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item">
+        <span class="stat-num" data-target="7">0</span>
+        <div class="stat-label fr">certifications</div>
+        <div class="stat-label en">certifications</div>
+      </div>
+    </div>
 
-    <button onclick="toggleLang()" class="lang-btn">FR / EN</button>
+    <div class="header-actions">
+      <div class="socials">
+        <a href="https://wa.me/237694904503" target="_blank" rel="noopener" title="WhatsApp" class="soc-link"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://linkedin.com/in/alfred-y-zambo-8359311a1" target="_blank" rel="noopener" title="LinkedIn" class="soc-link"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://github.com/" target="_blank" rel="noopener" title="GitHub" class="soc-link"><i class="fab fa-github"></i></a>
+        <a href="mailto:yohanzambo.28@gmail.com" title="Email" class="soc-link"><i class="fa fa-envelope"></i></a>
+      </div>
+      <a href="CV/CV-ZAMBO-1.pdf" class="cv-btn" target="_blank">
+        <i class="fa fa-file-arrow-down"></i>
+        <span class="fr">Télécharger CV</span><span class="en">Download CV</span>
+      </a>
+      <button onclick="toggleLang()" class="lang-btn">
+        <i class="fa fa-globe"></i> <span id="lang-label">EN</span>
+      </button>
+    </div>
+  </div>
 </header>
 
+<!-- ══ NAV ══ -->
 <nav>
-    <button onclick="openTab('about')" id="nav-about">
-        <span class="fr">À propos</span><span class="en">About</span>
-    </button>
-    <button onclick="openTab('experience')" id="nav-experience">
-        <span class="fr">Expérience</span><span class="en">Experience</span>
-    </button>
-    <button onclick="openTab('projects')" id="nav-projects">
-        <span class="fr">Projets</span><span class="en">Projects</span>
-    </button>
-    <button onclick="openTab('skills')" id="nav-skills">
-        <span class="fr">Compétences</span><span class="en">Skills</span>
-    </button>
-    <button onclick="openTab('certifications')" id="nav-certifications">
-        <span class="fr">Certifications</span><span class="en">Certifications</span>
-    </button>
+  <button onclick="openTab('about')" id="nav-about">
+    <i class="fa fa-user-shield"></i>
+    <span class="fr">À propos</span><span class="en">About</span>
+  </button>
+  <button onclick="openTab('experience')" id="nav-experience">
+    <i class="fa fa-briefcase"></i>
+    <span class="fr">Expérience</span><span class="en">Experience</span>
+  </button>
+  <button onclick="openTab('projects')" id="nav-projects">
+    <i class="fa fa-code-branch"></i>
+    <span class="fr">Projets</span><span class="en">Projects</span>
+  </button>
+  <button onclick="openTab('skills')" id="nav-skills">
+    <i class="fa fa-terminal"></i>
+    <span class="fr">Compétences</span><span class="en">Skills</span>
+  </button>
+  <button onclick="openTab('certifications')" id="nav-certifications">
+    <i class="fa fa-certificate"></i>
+    <span class="fr">Certifications</span><span class="en">Certifications</span>
+  </button>
 </nav>
 
-<!-- ================= A PROPOS ================= -->
+<!-- ══ À PROPOS ══ -->
 <section id="about" class="tab">
-  <h2 class="fr">Informations Personnelles</h2>
-  <h2 class="en">Personal Information</h2>
-
-  <div class="fr">
-    <p><strong>Âge :</strong> 26 ans</p>
-    <p><strong>Situation matrimoniale :</strong> Célibataire</p>
-    <p><strong>Adresse :</strong> Etoudi, Yaoundé – Cameroun</p>
-    <p><strong>Téléphone :</strong> +237 6 94 90 45 03</p>
-    <p><strong>Email :</strong> <a href="mailto:yohanzambo.28@gmail.com">yohanzambo.28@gmail.com</a></p>
+  <div class="section-title">
+    <span class="section-prompt">// </span>
+    <h2 class="fr">Informations Personnelles</h2>
+    <h2 class="en">Personal Information</h2>
   </div>
-
-  <div class="en">
-    <p><strong>Age:</strong> 26 years old</p>
-    <p><strong>Marital status:</strong> Single</p>
-    <p><strong>Location:</strong> Etoudi, Yaoundé – Cameroon</p>
-    <p><strong>Phone:</strong> +237 6 94 90 45 03</p>
-    <p><strong>Email:</strong> <a href="mailto:yohanzambo.28@gmail.com">yohanzambo.28@gmail.com</a></p>
+  <div class="about-grid">
+    <div class="info-card">
+      <i class="fa fa-cake-candles info-icon"></i>
+      <div>
+        <div class="info-label fr">Âge</div><div class="info-label en">Age</div>
+        <div class="info-val fr">26 ans</div><div class="info-val en">26 years old</div>
+      </div>
+    </div>
+    <div class="info-card">
+      <i class="fa fa-location-dot info-icon"></i>
+      <div>
+        <div class="info-label fr">Adresse</div><div class="info-label en">Location</div>
+        <div class="info-val">Etoudi, Yaoundé — Cameroun</div>
+      </div>
+    </div>
+    <div class="info-card">
+      <i class="fa fa-phone info-icon"></i>
+      <div>
+        <div class="info-label fr">Téléphone</div><div class="info-label en">Phone</div>
+        <div class="info-val">+237 6 94 90 45 03</div>
+      </div>
+    </div>
+    <div class="info-card">
+      <i class="fa fa-envelope info-icon"></i>
+      <div>
+        <div class="info-label">Email</div>
+        <div class="info-val"><a href="mailto:yohanzambo.28@gmail.com">yohanzambo.28@gmail.com</a></div>
+      </div>
+    </div>
+    <div class="info-card">
+      <i class="fa fa-building info-icon"></i>
+      <div>
+        <div class="info-label fr">Employeur</div><div class="info-label en">Employer</div>
+        <div class="info-val">ANTIC — Cellule des Systèmes d'Information</div>
+      </div>
+    </div>
+    <div class="info-card">
+      <i class="fa fa-circle-dot info-icon icon-green"></i>
+      <div>
+        <div class="info-label fr">Disponibilité</div><div class="info-label en">Status</div>
+        <div class="info-val status-green fr">En poste · Ouvert aux opportunités</div>
+        <div class="info-val status-green en">Employed · Open to opportunities</div>
+      </div>
+    </div>
   </div>
 </section>
 
-<!-- ================= EXPERIENCE ================= -->
+<!-- ══ EXPÉRIENCE ══ -->
 <section id="experience" class="tab">
-  <h2 class="fr">Expérience Professionnelle</h2>
-  <h2 class="en">Professional Experience</h2>
+  <div class="section-title">
+    <span class="section-prompt">// </span>
+    <h2 class="fr">Expérience Professionnelle</h2>
+    <h2 class="en">Professional Experience</h2>
+  </div>
   <div class="timeline">
-
-    <div class="timeline-item">
-      <h3>Février 2022 – Présent</h3>
-      <p class="fr">
-        <strong>Cadre Technique – ANTIC</strong> (Agence Nationale des Technologies de l'Information et de la Communication)
-      </p>
-      <p class="en">
-        <strong>Technical Officer – ANTIC</strong> (National Agency for Information and Communication Technologies)
-      </p>
-      <p class="fr">En service à la Cellule des Systèmes d'Information (CSI).</p>
-      <p class="en">Assigned to the Information Systems Unit (CSI).</p>
+    <div class="timeline-item reveal">
+      <div class="tl-marker"><i class="fa fa-server"></i></div>
+      <div class="tl-content">
+        <div class="tl-date">
+          <i class="fa fa-calendar-days"></i>
+          <span class="fr">Février 2022 – Présent</span>
+          <span class="en">February 2022 – Present</span>
+          <span class="tl-badge active fr">En poste</span>
+          <span class="tl-badge active en">Current</span>
+        </div>
+        <h3 class="fr">Cadre Technique — ANTIC</h3>
+        <h3 class="en">Technical Officer — ANTIC</h3>
+        <p class="tl-org">Agence Nationale des Technologies de l'Information et de la Communication</p>
+        <p class="fr">Affecté à la Cellule des Systèmes d'Information (CSI). Administration et sécurisation de l'infrastructure réseau et système de l'agence.</p>
+        <p class="en">Assigned to the Information Systems Unit (CSI). Administration and security hardening of the agency's network and system infrastructure.</p>
+        <div class="tl-tags">
+          <span class="tag tag-net">Cisco C9300</span>
+          <span class="tag tag-sec">FortiGate</span>
+          <span class="tag tag-virt">VMware vSphere</span>
+          <span class="tag tag-sec">DNSSEC</span>
+          <span class="tag tag-auto">Ansible</span>
+          <span class="tag tag-auto">Docker</span>
+        </div>
+      </div>
     </div>
-
-    <div class="timeline-item">
-      <h3>2021</h3>
-      <p class="fr"><strong>Stagiaire – Aéroports Du Cameroun (ADC)</strong></p>
-      <p class="en"><strong>Intern – Aéroports Du Cameroun (ADC)</strong></p>
-      <p class="fr">
-        Stage effectué au sein de la centrale électrique. Participation à la mise en place
-        et à l'utilisation de la Gestion de Maintenance Assistée par Ordinateur (GMAO)
-        pour le suivi et la planification des opérations de maintenance.
-      </p>
-      <p class="en">
-        Internship within the power plant department. Involvement in the implementation
-        and use of a Computerized Maintenance Management System (CMMS)
-        for maintenance tracking and planning.
-      </p>
+    <div class="timeline-item reveal">
+      <div class="tl-marker"><i class="fa fa-bolt"></i></div>
+      <div class="tl-content">
+        <div class="tl-date">
+          <i class="fa fa-calendar-days"></i>
+          <span>2021</span>
+          <span class="tl-badge">Stage</span>
+        </div>
+        <h3 class="fr">Stagiaire — Aéroports Du Cameroun (ADC)</h3>
+        <h3 class="en">Intern — Aéroports Du Cameroun (ADC)</h3>
+        <p class="fr">Stage au sein de la centrale électrique. Participation à la mise en place et utilisation de la GMAO pour le suivi et la planification des opérations de maintenance.</p>
+        <p class="en">Internship within the power plant department. CMMS implementation and use for maintenance tracking and planning.</p>
+        <div class="tl-tags">
+          <span class="tag">GMAO / CMMS</span>
+          <span class="tag">Maintenance industrielle</span>
+        </div>
+      </div>
     </div>
-
   </div>
 </section>
 
-<!-- ================= PROJETS ================= -->
+<!-- ══ PROJETS ══ -->
 <section id="projects" class="tab">
-  <h2 class="fr">Projets</h2>
-  <h2 class="en">Projects</h2>
-
-  <div class="fr">
-    <h3>P1 - Sécurisation de l'infrastructure DNS nationale - ccTLD ".cm"</h3>
-    <p>Membre de l'équipe technique chargée du déploiement de la signature cryptographique DNSSEC sur le ccTLD ".cm" en collaboration avec l'ICANN</p>
-    <ul>
-      <li>Implémentation de la chaîne de confiance</li>
-      <li>Gestion des clés cryptographiques (KSK / ZSK)</li>
-      <li>Tests de validation DNSSEC et supervision continue</li>
-      <li>Renforcement de l'intégrité du domaine national</li>
-    </ul>
-
-    <h3>P2 - Segmentation et sécurisation du réseau intranet de l'ANTIC</h3>
-    <p>Restructuration de l'infrastructure réseau intranet de l'ANTIC avec mise en place de la segmentation des flux, du filtrage du trafic et du contrôle d'accès.</p>
-    <ul>
-      <li>Segmentation du réseau en VLANs sur commutateurs Cisco Catalyst C9300</li>
-      <li>Configuration des politiques de sécurité et règles de filtrage sur FortiGate</li>
-      <li>Mise en place de l'IPS, antivirus et contrôle applicatif sur FortiGate</li>
-      <li>Gestion et optimisation de la bande passante internet (QoS / traffic shaping)</li>
-      <li>Analyse et supervision des logs de sécurité via FortiAnalyzer</li>
-      <li>Déploiement et gestion du réseau sans fil avec les équipements Ruckus</li>
-    </ul>
-
-    <h3>P3 - Rédaction de la documentation technique du réseau intranet</h3>
-    <p>Rédaction d'une documentation technique complète du réseau intranet de l'ANTIC couvrant l'ensemble des configurations déployées pour assurer la continuité de service et faciliter le dépannage.</p>
-    <ul>
-      <li>Documentation de l'architecture réseau et du plan d'adressage</li>
-      <li>Rédaction des procédures de configuration des équipements (Cisco C9300, FortiGate, Ruckus)</li>
-      <li>Élaboration des guides de dépannage et de résolution d'incidents</li>
-      <li>Mise en place d'une base de connaissance pour assurer la continuité de service</li>
-    </ul>
-
-    <h3>P4 - Déploiement d'applications en production avec Docker et reverse proxy</h3>
-    <p>Mise en production des applications développées en interne via une infrastructure conteneurisée Docker, exposées et sécurisées à travers des reverse proxies.</p>
-    <ul>
-      <li>Conteneurisation et déploiement des applications avec Docker et Docker Compose</li>
-      <li>Configuration des reverse proxies (Nginx / Traefik) pour l'exposition des services</li>
-      <li>Gestion des certificats SSL et sécurisation des accès applicatifs</li>
-      <li>Coordination avec les développeurs pour les mises en production et rollbacks</li>
-    </ul>
-
-    <h3>P5 - Mise à niveau de l'infrastructure vSphere de l'ANTIC</h3>
-    <p>Mise à niveau et modernisation de l'infrastructure de virtualisation vSphere pour améliorer les performances, la stabilité et la gestion des machines virtuelles.</p>
-    <ul>
-      <li>Mise à jour des hôtes ESXi vers la dernière version stable</li>
-      <li>Migration et consolidation des machines virtuelles</li>
-      <li>Optimisation des ressources CPU, RAM et stockage</li>
-      <li>Renforcement de la haute disponibilité (HA) et du DRS</li>
-    </ul>
-
-    <h3>P6 - Déploiement de stockage centralisé - SAN HPE MSA 2060/2050</h3>
-    <p>Mise en place d'une infrastructure de stockage haute performance HPE MSA interconnectée en fibre optique pour centraliser et sécuriser les données.</p>
-    <ul>
-      <li>Configuration du zoning Fibre Channel et LUN mapping</li>
-      <li>Intégration avec l'hyperviseur vSphere</li>
-      <li>Optimisation des performances I/O et de la bande passante</li>
-      <li>Amélioration de la disponibilité et de la résilience des services</li>
-    </ul>
-
-    <h3>P7 - Déploiement d'une solution de sauvegarde et de réplication de l'infrastructure vSphere</h3>
-    <p>Mise en place d'une stratégie de sauvegarde et de réplication des machines virtuelles vSphere pour garantir la continuité de service et la reprise après sinistre.</p>
-    <ul>
-      <li>Déploiement et configuration de Veeam Backup & Replication</li>
-      <li>Définition des politiques de sauvegarde (RPO / RTO)</li>
-      <li>Réplication des VMs critiques vers un site secondaire</li>
-      <li>Tests de restauration et validation des sauvegardes</li>
-    </ul>
-
-    <h3>P8 - Administration Active Directory et gestion du parc informatique</h3>
-    <p>Administration de l'annuaire Active Directory et mise en place d'une solution centralisée de gestion du parc informatique et des incidents avec GLPI.</p>
-    <ul>
-      <li>Gestion des comptes utilisateurs, groupes et unités d'organisation (OU)</li>
-      <li>Création et déploiement des stratégies de groupe (GPO)</li>
-      <li>Déploiement et configuration de GLPI pour la gestion du parc informatique</li>
-      <li>Mise en place du helpdesk et gestion des incidents via GLPI</li>
-    </ul>
-
-    <h3>P9 - Automatisation de l'infrastructure avec Ansible et Bash</h3>
-    <p>Mise en place d'une automatisation des tâches d'administration et de déploiement de l'infrastructure via Ansible et des scripts Bash.</p>
-    <ul>
-      <li>Écriture de playbooks Ansible pour le déploiement des serveurs</li>
-      <li>Automatisation des mises à jour et des configurations système</li>
-      <li>Développement de scripts Bash pour les tâches récurrentes</li>
-      <li>Réduction du temps de déploiement et des erreurs humaines</li>
-    </ul>
-
-    <h3>P10 - Mise en place d'une plateforme de monitoring et d'alertes</h3>
-    <p>Déploiement d'une plateforme de supervision de l'infrastructure basée sur Prometheus, Grafana et Nagios pour assurer une visibilité en temps réel des services.</p>
-    <ul>
-      <li>Déploiement et configuration de Prometheus & Grafana</li>
-      <li>Mise en place de tableaux de bord de supervision personnalisés</li>
-      <li>Configuration de Nagios avec scripts Bash pour les checks personnalisés</li>
-      <li>Mise en place d'un système d'alerting sur les seuils critiques</li>
-    </ul>
-
-    <h3>P11 - Déploiement d'un cluster Proxmox et migration depuis vSphere</h3>
-    <p>Déploiement d'un cluster Proxmox VE en environnement de test pour évaluer et préparer la migration des machines virtuelles depuis l'infrastructure vSphere existante.</p>
-    <ul>
-      <li>Installation et configuration du cluster Proxmox VE</li>
-      <li>Tests de migration des VMs vSphere vers Proxmox</li>
-      <li>Comparaison des performances entre les deux hyperviseurs</li>
-      <li>Documentation des procédures de migration et des écarts techniques</li>
-    </ul>
+  <div class="section-title">
+    <span class="section-prompt">// </span>
+    <h2 class="fr">Projets</h2>
+    <h2 class="en">Projects</h2>
   </div>
 
-  <div class="en">
-    <h3>P1 - Securing the National DNS Infrastructure - ccTLD ".cm"</h3>
-    <p>Deployment of DNSSEC cryptographic signing on the ".cm" ccTLD in collaboration with ICANN.</p>
-    <ul>
-      <li>Implementation of the chain of trust</li>
-      <li>Cryptographic key management (KSK / ZSK)</li>
-      <li>DNSSEC validation tests and continuous monitoring</li>
-      <li>Strengthening the integrity of the national domain</li>
-    </ul> 
+  <div class="proj-filters">
+    <button class="pf-btn active" data-filter="all"><span class="fr">Tous</span><span class="en">All</span></button>
+    <button class="pf-btn" data-filter="network"><i class="fa fa-network-wired"></i> <span class="fr">Réseau</span><span class="en">Network</span></button>
+    <button class="pf-btn" data-filter="security"><i class="fa fa-shield-halved"></i> <span class="fr">Sécurité</span><span class="en">Security</span></button>
+    <button class="pf-btn" data-filter="virtualisation"><i class="fa fa-cube"></i> Virtualisation</button>
+    <button class="pf-btn" data-filter="automation"><i class="fa fa-gears"></i> <span class="fr">Automatisation</span><span class="en">Automation</span></button>
+    <button class="pf-btn" data-filter="monitoring"><i class="fa fa-chart-line"></i> Monitoring</button>
+  </div>
 
-    <h3>P2 - Segmentation and Security of ANTIC's Intranet Network</h3>
-    <p>Restructuring of the ANTIC intranet network infrastructure with implementation of traffic segmentation, filtering, and access control.</p>
-    <ul>
-      <li>Network segmentation into VLANs on Cisco Catalyst C9300 switches</li>
-      <li>Security policies and filtering rules configuration on FortiGate</li>
-      <li>IPS, antivirus and application control setup on FortiGate</li>
-      <li>Internet bandwidth management and optimization (QoS / traffic shaping)</li>
-      <li>Security log analysis and monitoring via FortiAnalyzer</li>
-      <li>Wireless network deployment and management with Ruckus equipment</li>
-    </ul>
+  <div class="proj-grid">
 
-    <h3>P3 - Technical Documentation of the Intranet Network</h3>
-    <p>Writing of complete technical documentation for ANTIC's intranet network covering all deployed configurations to ensure service continuity and facilitate troubleshooting.</p>
-    <ul>
-      <li>Network architecture and addressing plan documentation</li>
-      <li>Equipment configuration procedures (Cisco C9300, FortiGate, Ruckus)</li>
-      <li>Troubleshooting and incident resolution guides</li>
-      <li>Knowledge base setup to ensure service continuity</li>
-    </ul>
+    <div class="proj-card" data-cat="network security">
+      <div class="proj-header">
+        <span class="proj-num">P01</span>
+        <div class="proj-hinfo">
+          <h3 class="fr">Sécurisation DNS nationale — ccTLD ".cm"</h3>
+          <h3 class="en">National DNS Security — ccTLD ".cm"</h3>
+        </div>
+        <button class="proj-toggle"><i class="fa fa-chevron-down"></i></button>
+      </div>
+      <div class="proj-tags">
+        <span class="tag tag-sec">DNSSEC</span><span class="tag tag-sec">Cryptographie</span>
+        <span class="tag tag-net">DNS</span><span class="tag">ICANN</span>
+      </div>
+      <div class="proj-body">
+        <p class="fr">Déploiement de la signature cryptographique DNSSEC sur le ccTLD ".cm" en collaboration avec l'ICANN.</p>
+        <p class="en">DNSSEC cryptographic signing deployment on the ".cm" ccTLD in collaboration with ICANN.</p>
+        <ul class="fr"><li>Implémentation de la chaîne de confiance</li><li>Gestion des clés cryptographiques (KSK / ZSK)</li><li>Tests de validation DNSSEC et supervision continue</li><li>Renforcement de l'intégrité du domaine national</li></ul>
+        <ul class="en"><li>Chain of trust implementation</li><li>Cryptographic key management (KSK / ZSK)</li><li>DNSSEC validation tests and continuous monitoring</li><li>National domain integrity reinforcement</li></ul>
+      </div>
+    </div>
 
-    <h3>P4 - Production Deployment with Docker and Reverse Proxy</h3>
-    <p>Deploying internally developed applications via a containerized Docker infrastructure, exposed and secured through reverse proxies.</p>
-    <ul>
-      <li>Application containerization and deployment with Docker and Docker Compose</li>
-      <li>Reverse proxy configuration (Nginx / Traefik) for service exposure</li>
-      <li>SSL certificate management and application access security</li>
-      <li>Coordination with developers for production deployments and rollbacks</li>
-    </ul>
+    <div class="proj-card" data-cat="network security">
+      <div class="proj-header">
+        <span class="proj-num">P02</span>
+        <div class="proj-hinfo">
+          <h3 class="fr">Segmentation &amp; Sécurisation réseau ANTIC</h3>
+          <h3 class="en">ANTIC Network Segmentation &amp; Security</h3>
+        </div>
+        <button class="proj-toggle"><i class="fa fa-chevron-down"></i></button>
+      </div>
+      <div class="proj-tags">
+        <span class="tag tag-net">Cisco C9300</span><span class="tag tag-net">VLAN</span>
+        <span class="tag tag-sec">FortiGate</span><span class="tag tag-sec">IPS</span>
+        <span class="tag tag-net">Ruckus</span><span class="tag">QoS</span>
+      </div>
+      <div class="proj-body">
+        <p class="fr">Restructuration complète du réseau intranet avec segmentation des flux, filtrage et contrôle d'accès.</p>
+        <p class="en">Full intranet network restructuring with traffic segmentation, filtering and access control.</p>
+        <ul class="fr"><li>Segmentation en VLANs sur Cisco Catalyst C9300</li><li>Politiques de sécurité et filtrage sur FortiGate</li><li>Mise en place de l'IPS, antivirus et contrôle applicatif</li><li>Optimisation bande passante (QoS / traffic shaping)</li><li>Analyse des logs via FortiAnalyzer</li><li>Déploiement réseau sans fil Ruckus</li></ul>
+        <ul class="en"><li>VLAN segmentation on Cisco Catalyst C9300</li><li>Security policies and filtering on FortiGate</li><li>IPS, antivirus and application control setup</li><li>Bandwidth optimization (QoS / traffic shaping)</li><li>Log analysis via FortiAnalyzer</li><li>Ruckus wireless network deployment</li></ul>
+      </div>
+    </div>
 
-    <h3>P5 - vSphere Infrastructure Upgrade</h3>
-    <p>Upgrading and modernizing the vSphere virtualization infrastructure to improve performance, stability and virtual machine management.</p>
-    <ul>
-      <li>ESXi host update to the latest stable version</li>
-      <li>Virtual machine migration and consolidation</li>
-      <li>CPU, RAM and storage resource optimization</li>
-      <li>High Availability (HA) and DRS reinforcement</li>
-    </ul>
+    <div class="proj-card" data-cat="network security">
+      <div class="proj-header">
+        <span class="proj-num">P03</span>
+        <div class="proj-hinfo">
+          <h3 class="fr">Documentation technique réseau intranet</h3>
+          <h3 class="en">Intranet Network Technical Documentation</h3>
+        </div>
+        <button class="proj-toggle"><i class="fa fa-chevron-down"></i></button>
+      </div>
+      <div class="proj-tags">
+        <span class="tag">Architecture réseau</span><span class="tag">Knowledge Base</span>
+        <span class="tag tag-net">Cisco</span><span class="tag tag-sec">FortiGate</span>
+      </div>
+      <div class="proj-body">
+        <p class="fr">Documentation complète couvrant toutes les configurations déployées pour assurer la continuité de service.</p>
+        <p class="en">Complete documentation covering all deployed configurations for service continuity.</p>
+        <ul class="fr"><li>Architecture réseau et plan d'adressage</li><li>Procédures de configuration (Cisco C9300, FortiGate, Ruckus)</li><li>Guides de dépannage et résolution d'incidents</li><li>Base de connaissance pour la continuité de service</li></ul>
+        <ul class="en"><li>Network architecture and addressing plan</li><li>Configuration procedures (Cisco C9300, FortiGate, Ruckus)</li><li>Troubleshooting and incident resolution guides</li><li>Knowledge base for service continuity</li></ul>
+      </div>
+    </div>
 
-    <h3>P6 - Centralized Storage Deployment - SAN HPE MSA 2060/2050</h3>
-    <p>Deployment of a high-performance HPE MSA storage infrastructure interconnected via fiber optic to centralize and secure data.</p>
-    <ul>
-      <li>Fibre Channel zoning and LUN mapping configuration</li>
-      <li>Integration with vSphere hypervisor</li>
-      <li>I/O performance and bandwidth optimization</li>
-      <li>Improved service availability and resilience</li>
-    </ul>
+    <div class="proj-card" data-cat="automation">
+      <div class="proj-header">
+        <span class="proj-num">P04</span>
+        <div class="proj-hinfo">
+          <h3 class="fr">Déploiement production — Docker &amp; Reverse Proxy</h3>
+          <h3 class="en">Production Deployment — Docker &amp; Reverse Proxy</h3>
+        </div>
+        <button class="proj-toggle"><i class="fa fa-chevron-down"></i></button>
+      </div>
+      <div class="proj-tags">
+        <span class="tag tag-auto">Docker</span><span class="tag tag-auto">Docker Compose</span>
+        <span class="tag tag-net">Nginx</span><span class="tag tag-net">Traefik</span><span class="tag tag-sec">SSL/TLS</span>
+      </div>
+      <div class="proj-body">
+        <p class="fr">Mise en production d'applications internes via une infrastructure conteneurisée Docker avec reverse proxies.</p>
+        <p class="en">Deploying internal applications via containerized Docker infrastructure with reverse proxies.</p>
+        <ul class="fr"><li>Conteneurisation avec Docker et Docker Compose</li><li>Configuration des reverse proxies (Nginx / Traefik)</li><li>Gestion des certificats SSL et sécurisation des accès</li><li>Coordination des mises en production et rollbacks</li></ul>
+        <ul class="en"><li>Containerization with Docker and Docker Compose</li><li>Reverse proxy configuration (Nginx / Traefik)</li><li>SSL certificate management and access security</li><li>Production deployments and rollback coordination</li></ul>
+      </div>
+    </div>
 
-    <h3>P7 - Backup and Replication Solution for vSphere Infrastructure</h3>
-    <p>Implementation of a backup and replication strategy for vSphere virtual machines to ensure service continuity and disaster recovery.</p>
-    <ul>
-      <li>Veeam Backup & Replication deployment and configuration</li>
-      <li>Backup policy definition (RPO / RTO)</li>
-      <li>Critical VM replication to a secondary site</li>
-      <li>Restore tests and backup validation</li>
-    </ul>
+    <div class="proj-card" data-cat="virtualisation">
+      <div class="proj-header">
+        <span class="proj-num">P05</span>
+        <div class="proj-hinfo">
+          <h3 class="fr">Mise à niveau infrastructure vSphere</h3>
+          <h3 class="en">vSphere Infrastructure Upgrade</h3>
+        </div>
+        <button class="proj-toggle"><i class="fa fa-chevron-down"></i></button>
+      </div>
+      <div class="proj-tags">
+        <span class="tag tag-virt">VMware vSphere</span><span class="tag tag-virt">ESXi</span>
+        <span class="tag tag-virt">HA / DRS</span><span class="tag">Migration VM</span>
+      </div>
+      <div class="proj-body">
+        <p class="fr">Mise à niveau et modernisation de l'infrastructure vSphere pour améliorer performances et stabilité.</p>
+        <p class="en">Upgrading and modernizing the vSphere infrastructure for improved performance and stability.</p>
+        <ul class="fr"><li>Mise à jour des hôtes ESXi vers la dernière version stable</li><li>Migration et consolidation des machines virtuelles</li><li>Optimisation des ressources CPU, RAM et stockage</li><li>Renforcement de la haute disponibilité (HA) et du DRS</li></ul>
+        <ul class="en"><li>ESXi hosts update to latest stable version</li><li>VM migration and consolidation</li><li>CPU, RAM and storage resource optimization</li><li>High Availability (HA) and DRS reinforcement</li></ul>
+      </div>
+    </div>
 
-    <h3>P8 - Active Directory Administration and IT Asset Management</h3>
-    <p>Administration of the Active Directory and deployment of a centralized IT asset and incident management solution with GLPI.</p>
-    <ul>
-      <li>User accounts, groups and organizational units (OU) management</li>
-      <li>Group Policy Objects (GPO) creation and deployment</li>
-      <li>GLPI deployment and configuration for IT asset management</li>
-      <li>Helpdesk setup and incident management via GLPI</li>
-    </ul>
+    <div class="proj-card" data-cat="virtualisation">
+      <div class="proj-header">
+        <span class="proj-num">P06</span>
+        <div class="proj-hinfo">
+          <h3 class="fr">Stockage centralisé — SAN HPE MSA 2060/2050</h3>
+          <h3 class="en">Centralized Storage — SAN HPE MSA 2060/2050</h3>
+        </div>
+        <button class="proj-toggle"><i class="fa fa-chevron-down"></i></button>
+      </div>
+      <div class="proj-tags">
+        <span class="tag tag-virt">HPE MSA</span><span class="tag tag-virt">SAN</span>
+        <span class="tag tag-net">Fibre Channel</span><span class="tag">LUN Mapping</span>
+      </div>
+      <div class="proj-body">
+        <p class="fr">Mise en place d'une infrastructure de stockage haute performance HPE MSA interconnectée en fibre optique.</p>
+        <p class="en">High-performance HPE MSA storage infrastructure deployment via fiber optic interconnect.</p>
+        <ul class="fr"><li>Configuration du zoning Fibre Channel et LUN mapping</li><li>Intégration avec l'hyperviseur vSphere</li><li>Optimisation des performances I/O et bande passante</li><li>Amélioration de la disponibilité et résilience des services</li></ul>
+        <ul class="en"><li>Fibre Channel zoning and LUN mapping</li><li>vSphere hypervisor integration</li><li>I/O performance and bandwidth optimization</li><li>Improved service availability and resilience</li></ul>
+      </div>
+    </div>
 
-    <h3>P9 - Infrastructure Automation with Ansible and Bash</h3>
-    <p>Automating administration and deployment tasks across the infrastructure using Ansible playbooks and Bash scripts.</p>
-    <ul>
-      <li>Ansible playbook writing for server deployment</li>
-      <li>Automated system updates and configuration management</li>
-      <li>Bash script development for recurring tasks</li>
-      <li>Reduced deployment time and human errors</li>
-    </ul>
+    <div class="proj-card" data-cat="virtualisation">
+      <div class="proj-header">
+        <span class="proj-num">P07</span>
+        <div class="proj-hinfo">
+          <h3 class="fr">Sauvegarde &amp; Réplication vSphere — Veeam</h3>
+          <h3 class="en">vSphere Backup &amp; Replication — Veeam</h3>
+        </div>
+        <button class="proj-toggle"><i class="fa fa-chevron-down"></i></button>
+      </div>
+      <div class="proj-tags">
+        <span class="tag tag-virt">Veeam</span><span class="tag">RPO / RTO</span>
+        <span class="tag">Disaster Recovery</span><span class="tag tag-virt">Réplication VM</span>
+      </div>
+      <div class="proj-body">
+        <p class="fr">Stratégie de sauvegarde et réplication des VMs vSphere pour garantir la continuité et la reprise après sinistre.</p>
+        <p class="en">Backup and replication strategy for vSphere VMs ensuring service continuity and disaster recovery.</p>
+        <ul class="fr"><li>Déploiement et configuration de Veeam Backup &amp; Replication</li><li>Définition des politiques de sauvegarde (RPO / RTO)</li><li>Réplication des VMs critiques vers un site secondaire</li><li>Tests de restauration et validation des sauvegardes</li></ul>
+        <ul class="en"><li>Veeam Backup &amp; Replication deployment</li><li>Backup policy definition (RPO / RTO)</li><li>Critical VM replication to secondary site</li><li>Restore tests and backup validation</li></ul>
+      </div>
+    </div>
 
-    <h3>P10 - Monitoring and Alerting Platform</h3>
-    <p>Deployment of an infrastructure monitoring platform based on Prometheus, Grafana and Nagios for real-time service visibility.</p>
-    <ul>
-      <li>Prometheus & Grafana deployment and configuration</li>
-      <li>Custom monitoring dashboards setup</li>
-      <li>Nagios configuration with Bash scripts for custom checks</li>
-      <li>Intelligent alerting system on critical thresholds</li>
-    </ul>
+    <div class="proj-card" data-cat="security automation">
+      <div class="proj-header">
+        <span class="proj-num">P08</span>
+        <div class="proj-hinfo">
+          <h3 class="fr">Active Directory &amp; Gestion du parc informatique</h3>
+          <h3 class="en">Active Directory &amp; IT Asset Management</h3>
+        </div>
+        <button class="proj-toggle"><i class="fa fa-chevron-down"></i></button>
+      </div>
+      <div class="proj-tags">
+        <span class="tag tag-sec">Active Directory</span><span class="tag tag-sec">GPO</span>
+        <span class="tag">GLPI</span><span class="tag">ITSM</span>
+      </div>
+      <div class="proj-body">
+        <p class="fr">Administration de l'Active Directory et déploiement d'une solution centralisée de gestion du parc avec GLPI.</p>
+        <p class="en">Active Directory administration and centralized IT asset management deployment with GLPI.</p>
+        <ul class="fr"><li>Gestion des comptes utilisateurs, groupes et OU</li><li>Création et déploiement des GPO</li><li>Déploiement et configuration de GLPI</li><li>Mise en place du helpdesk et gestion des incidents</li></ul>
+        <ul class="en"><li>User accounts, groups and OU management</li><li>GPO creation and deployment</li><li>GLPI deployment and configuration</li><li>Helpdesk and incident management setup</li></ul>
+      </div>
+    </div>
 
-    <h3>P11 - Proxmox Cluster Deployment and Migration from vSphere</h3>
-    <p>Deployment of a Proxmox VE cluster in a test environment to evaluate and prepare virtual machine migration from the existing vSphere infrastructure.</p>
-    <ul>
-      <li>Proxmox VE cluster installation and configuration</li>
-      <li>vSphere to Proxmox VM migration tests</li>
-      <li>Performance comparison between both hypervisors</li>
-      <li>Migration procedures and technical gap documentation</li>
-    </ul>
+    <div class="proj-card" data-cat="automation">
+      <div class="proj-header">
+        <span class="proj-num">P09</span>
+        <div class="proj-hinfo">
+          <h3 class="fr">Automatisation infrastructure — Ansible &amp; Bash</h3>
+          <h3 class="en">Infrastructure Automation — Ansible &amp; Bash</h3>
+        </div>
+        <button class="proj-toggle"><i class="fa fa-chevron-down"></i></button>
+      </div>
+      <div class="proj-tags">
+        <span class="tag tag-auto">Ansible</span><span class="tag tag-auto">Bash</span>
+        <span class="tag tag-auto">IaC</span><span class="tag">Linux</span>
+      </div>
+      <div class="proj-body">
+        <p class="fr">Automatisation des tâches d'administration et de déploiement via Ansible et scripts Bash.</p>
+        <p class="en">Automating administration and deployment tasks via Ansible playbooks and Bash scripts.</p>
+        <ul class="fr"><li>Playbooks Ansible pour le déploiement des serveurs</li><li>Automatisation des mises à jour et configurations système</li><li>Scripts Bash pour les tâches récurrentes</li><li>Réduction du temps de déploiement et des erreurs humaines</li></ul>
+        <ul class="en"><li>Ansible playbooks for server deployment</li><li>Automated system updates and configuration management</li><li>Bash scripts for recurring tasks</li><li>Reduced deployment time and human errors</li></ul>
+      </div>
+    </div>
+
+    <div class="proj-card" data-cat="monitoring">
+      <div class="proj-header">
+        <span class="proj-num">P10</span>
+        <div class="proj-hinfo">
+          <h3 class="fr">Plateforme monitoring &amp; alertes</h3>
+          <h3 class="en">Monitoring &amp; Alerting Platform</h3>
+        </div>
+        <button class="proj-toggle"><i class="fa fa-chevron-down"></i></button>
+      </div>
+      <div class="proj-tags">
+        <span class="tag tag-mon">Prometheus</span><span class="tag tag-mon">Grafana</span>
+        <span class="tag tag-mon">Nagios</span><span class="tag tag-auto">Bash</span>
+      </div>
+      <div class="proj-body">
+        <p class="fr">Plateforme de supervision basée sur Prometheus, Grafana et Nagios pour une visibilité en temps réel.</p>
+        <p class="en">Monitoring platform based on Prometheus, Grafana and Nagios for real-time service visibility.</p>
+        <ul class="fr"><li>Déploiement et configuration de Prometheus &amp; Grafana</li><li>Tableaux de bord de supervision personnalisés</li><li>Configuration de Nagios avec scripts Bash pour les checks</li><li>Système d'alerting sur les seuils critiques</li></ul>
+        <ul class="en"><li>Prometheus &amp; Grafana deployment</li><li>Custom monitoring dashboards</li><li>Nagios configuration with Bash scripts</li><li>Intelligent alerting on critical thresholds</li></ul>
+      </div>
+    </div>
+
+    <div class="proj-card" data-cat="virtualisation">
+      <div class="proj-header">
+        <span class="proj-num">P11</span>
+        <div class="proj-hinfo">
+          <h3 class="fr">Cluster Proxmox &amp; Migration depuis vSphere</h3>
+          <h3 class="en">Proxmox Cluster &amp; Migration from vSphere</h3>
+        </div>
+        <button class="proj-toggle"><i class="fa fa-chevron-down"></i></button>
+      </div>
+      <div class="proj-tags">
+        <span class="tag tag-virt">Proxmox VE</span><span class="tag tag-virt">KVM</span>
+        <span class="tag tag-virt">vSphere</span><span class="tag">Migration</span>
+      </div>
+      <div class="proj-body">
+        <p class="fr">Déploiement d'un cluster Proxmox VE en environnement de test pour évaluer la migration depuis vSphere.</p>
+        <p class="en">Proxmox VE cluster deployment in test environment to evaluate migration from vSphere.</p>
+        <ul class="fr"><li>Installation et configuration du cluster Proxmox VE</li><li>Tests de migration des VMs vSphere vers Proxmox</li><li>Comparaison des performances entre hyperviseurs</li><li>Documentation des procédures et écarts techniques</li></ul>
+        <ul class="en"><li>Proxmox VE cluster installation and configuration</li><li>vSphere to Proxmox VM migration tests</li><li>Hypervisor performance comparison</li><li>Migration procedures and technical gap documentation</li></ul>
+      </div>
+    </div>
+
   </div>
 </section>
 
-<!-- ================= COMPETENCES ================= -->
+<!-- ══ COMPÉTENCES ══ -->
 <section id="skills" class="tab">
-  <h2 class="fr">Compétences Techniques</h2>
-  <h2 class="en">Technical Skills</h2>
+  <div class="section-title">
+    <span class="section-prompt">// </span>
+    <h2 class="fr">Compétences Techniques</h2>
+    <h2 class="en">Technical Skills</h2>
+  </div>
+  <div class="skills-grid">
 
-  <div class="skill" data-percent="85">
-    <span>Administration système & Hardening</span>
-    <div class="bar"><div class="progress"></div></div>
-  </div>
-  <div class="skill" data-percent="90">
-    <span>Virtualisation & Infrastructure</span>
-    <div class="bar"><div class="progress"></div></div>
-  </div>
-  <div class="skill" data-percent="88">
-    <span>Administration réseau & Cybersécurité</span>
-    <div class="bar"><div class="progress"></div></div>
-  </div>
-  <div class="skill" data-percent="83">
-    <span>Supervision & Monitoring</span>
-    <div class="bar"><div class="progress"></div></div>
-  </div>
-  <div class="skill" data-percent="78">
-    <span>Automatisation & Intégration</span>
-    <div class="bar"><div class="progress"></div></div>
-  </div>
-  <div class="skill" data-percent="84">
-    <span>Rédaction technique & Gestion de projets</span>
-    <div class="bar"><div class="progress"></div></div>
+    <div class="skill-block">
+      <div class="skill-block-header"><i class="fa fa-shield-halved"></i><span class="fr">Réseau &amp; Sécurité</span><span class="en">Network &amp; Security</span></div>
+      <div class="tool-tags">
+        <span class="tt tt-sec">FortiGate</span><span class="tt tt-sec">FortiAnalyzer</span>
+        <span class="tt tt-net">Cisco C9300</span><span class="tt tt-net">VLAN / 802.1Q</span>
+        <span class="tt tt-net">Ruckus WiFi</span><span class="tt tt-sec">IPS / IDS</span>
+        <span class="tt tt-sec">Firewall</span><span class="tt tt-sec">DNSSEC</span><span class="tt">QoS</span>
+      </div>
+      <div class="skill" data-percent="90">
+        <div class="skill-meta"><span class="fr">Maîtrise</span><span class="en">Proficiency</span><span class="skill-pct">90%</span></div>
+        <div class="bar"><div class="progress"></div></div>
+      </div>
+    </div>
+
+    <div class="skill-block">
+      <div class="skill-block-header"><i class="fa fa-cube"></i><span class="fr">Virtualisation &amp; Infrastructure</span><span class="en">Virtualisation &amp; Infrastructure</span></div>
+      <div class="tool-tags">
+        <span class="tt tt-virt">VMware vSphere</span><span class="tt tt-virt">ESXi</span>
+        <span class="tt tt-virt">vCenter</span><span class="tt tt-virt">Proxmox VE</span>
+        <span class="tt tt-virt">Docker</span><span class="tt tt-virt">Docker Compose</span>
+        <span class="tt tt-virt">HPE MSA SAN</span><span class="tt">Fibre Channel</span>
+      </div>
+      <div class="skill" data-percent="92">
+        <div class="skill-meta"><span class="fr">Maîtrise</span><span class="en">Proficiency</span><span class="skill-pct">92%</span></div>
+        <div class="bar"><div class="progress"></div></div>
+      </div>
+    </div>
+
+    <div class="skill-block">
+      <div class="skill-block-header"><i class="fa fa-server"></i><span class="fr">Administration Système</span><span class="en">System Administration</span></div>
+      <div class="tool-tags">
+        <span class="tt tt-sys">Linux (Debian/RHEL)</span><span class="tt tt-sys">Windows Server</span>
+        <span class="tt tt-sys">Active Directory</span><span class="tt tt-sys">GPO</span>
+        <span class="tt">GLPI</span><span class="tt">Veeam</span>
+        <span class="tt tt-sys">Nginx</span><span class="tt tt-sys">Apache</span>
+      </div>
+      <div class="skill" data-percent="85">
+        <div class="skill-meta"><span class="fr">Maîtrise</span><span class="en">Proficiency</span><span class="skill-pct">85%</span></div>
+        <div class="bar"><div class="progress"></div></div>
+      </div>
+    </div>
+
+    <div class="skill-block">
+      <div class="skill-block-header"><i class="fa fa-chart-line"></i><span>Monitoring &amp; Supervision</span></div>
+      <div class="tool-tags">
+        <span class="tt tt-mon">Prometheus</span><span class="tt tt-mon">Grafana</span>
+        <span class="tt tt-mon">Nagios</span><span class="tt tt-mon">FortiAnalyzer</span>
+        <span class="tt">SNMP</span><span class="tt">Syslog</span><span class="tt">Alerting</span>
+      </div>
+      <div class="skill" data-percent="83">
+        <div class="skill-meta"><span class="fr">Maîtrise</span><span class="en">Proficiency</span><span class="skill-pct">83%</span></div>
+        <div class="bar"><div class="progress"></div></div>
+      </div>
+    </div>
+
+    <div class="skill-block">
+      <div class="skill-block-header"><i class="fa fa-gears"></i><span class="fr">Automatisation &amp; Scripting</span><span class="en">Automation &amp; Scripting</span></div>
+      <div class="tool-tags">
+        <span class="tt tt-auto">Ansible</span><span class="tt tt-auto">Bash</span>
+        <span class="tt tt-auto">Python</span><span class="tt tt-auto">Terraform</span>
+        <span class="tt">Git</span><span class="tt">CI/CD</span>
+      </div>
+      <div class="skill" data-percent="78">
+        <div class="skill-meta"><span class="fr">Maîtrise</span><span class="en">Proficiency</span><span class="skill-pct">78%</span></div>
+        <div class="bar"><div class="progress"></div></div>
+      </div>
+    </div>
+
+    <div class="skill-block">
+      <div class="skill-block-header"><i class="fa fa-file-lines"></i><span class="fr">Documentation &amp; Gestion de projets</span><span class="en">Documentation &amp; Project Mgmt</span></div>
+      <div class="tool-tags">
+        <span class="tt">Markdown</span><span class="tt">Draw.io</span>
+        <span class="tt">ITIL</span><span class="tt">ISO 27001</span>
+        <span class="tt">Confluence</span><span class="tt fr">Rédaction technique</span><span class="tt en">Technical writing</span>
+      </div>
+      <div class="skill" data-percent="84">
+        <div class="skill-meta"><span class="fr">Maîtrise</span><span class="en">Proficiency</span><span class="skill-pct">84%</span></div>
+        <div class="bar"><div class="progress"></div></div>
+      </div>
+    </div>
+
   </div>
 </section>
 
-<!-- ================= CERTIFICATIONS ================= -->
+<!-- ══ CERTIFICATIONS ══ -->
 <section id="certifications" class="tab">
-  <h2 class="fr">Certifications</h2>
-  <h2 class="en">Certifications</h2>
+  <div class="section-title">
+    <span class="section-prompt">// </span>
+    <h2 class="fr">Certifications</h2>
+    <h2 class="en">Certifications</h2>
+  </div>
   <div class="cert-grid">
 
-    <a href="https://www.credly.com/badges/d01245c3-18d6-4cf6-8e09-ab45552998a4" target="_blank" class="cert">
-      CCNA
+    <a href="https://www.credly.com/badges/d01245c3-18d6-4cf6-8e09-ab45552998a4" target="_blank" rel="noopener" class="cert-card">
+      <div class="cert-icon"><i class="fa fa-network-wired"></i></div>
+      <div class="cert-body">
+        <div class="cert-name">CCNA</div>
+        <div class="cert-org">Cisco</div>
+        <div class="cert-verify"><i class="fa fa-arrow-up-right-from-square"></i> Credly</div>
+      </div>
     </a>
 
-    <a href="https://www.credly.com/badges/52946e5c-d227-4033-8e97-5222c0e1c9dd" target="_blank" class="cert">
-      Fortinet - FCA
+    <a href="https://www.credly.com/badges/52946e5c-d227-4033-8e97-5222c0e1c9dd" target="_blank" rel="noopener" class="cert-card">
+      <div class="cert-icon"><i class="fa fa-shield-halved"></i></div>
+      <div class="cert-body">
+        <div class="cert-name">FCA</div>
+        <div class="cert-org">Fortinet Certified Associate</div>
+        <div class="cert-verify"><i class="fa fa-arrow-up-right-from-square"></i> Credly</div>
+      </div>
     </a>
 
-    <a href="https://www.credly.com/badges/e72e24e6-9ae7-409b-b825-4bb293ec88c5" target="_blank" class="cert">
-      Fortinet - FCP
+    <a href="https://www.credly.com/badges/e72e24e6-9ae7-409b-b825-4bb293ec88c5" target="_blank" rel="noopener" class="cert-card">
+      <div class="cert-icon"><i class="fa fa-shield-halved"></i></div>
+      <div class="cert-body">
+        <div class="cert-name">FCP</div>
+        <div class="cert-org">Fortinet Certified Professional</div>
+        <div class="cert-verify"><i class="fa fa-arrow-up-right-from-square"></i> Credly</div>
+      </div>
     </a>
 
-    <a href="https://www.credly.com/badges/d01245c3-18d6-4cf6-8e09-ab45552998a4" target="_blank" class="cert">
-      ISO 27001 Lead Implementer
+    <!-- ⚠ Mettre à jour les URLs Credly pour les 4 certifications ci-dessous -->
+    <a href="#" target="_blank" rel="noopener" class="cert-card">
+      <div class="cert-icon"><i class="fa fa-lock"></i></div>
+      <div class="cert-body">
+        <div class="cert-name">ISO 27001</div>
+        <div class="cert-org">Lead Implementer</div>
+        <div class="cert-verify"><i class="fa fa-arrow-up-right-from-square"></i> Credly</div>
+      </div>
     </a>
 
-    <a href="https://www.credly.com/badges/d01245c3-18d6-4cf6-8e09-ab45552998a4" target="_blank" class="cert">
-      LPI-1
+    <a href="#" target="_blank" rel="noopener" class="cert-card">
+      <div class="cert-icon"><i class="fab fa-linux"></i></div>
+      <div class="cert-body">
+        <div class="cert-name">LPIC-1</div>
+        <div class="cert-org">Linux Professional Institute</div>
+        <div class="cert-verify"><i class="fa fa-arrow-up-right-from-square"></i> Credly</div>
+      </div>
     </a>
 
-    <a href="https://www.credly.com/badges/d01245c3-18d6-4cf6-8e09-ab45552998a4" target="_blank" class="cert">
-      AWS Cloud Practitioner
+    <a href="#" target="_blank" rel="noopener" class="cert-card">
+      <div class="cert-icon"><i class="fab fa-aws"></i></div>
+      <div class="cert-body">
+        <div class="cert-name">AWS Cloud Practitioner</div>
+        <div class="cert-org">Amazon Web Services</div>
+        <div class="cert-verify"><i class="fa fa-arrow-up-right-from-square"></i> Credly</div>
+      </div>
     </a>
 
-    <a href="https://www.credly.com/badges/d01245c3-18d6-4cf6-8e09-ab45552998a4" target="_blank" class="cert">
-      AWS AI Practitioner
+    <a href="#" target="_blank" rel="noopener" class="cert-card">
+      <div class="cert-icon"><i class="fab fa-aws"></i></div>
+      <div class="cert-body">
+        <div class="cert-name">AWS AI Practitioner</div>
+        <div class="cert-org">Amazon Web Services</div>
+        <div class="cert-verify"><i class="fa fa-arrow-up-right-from-square"></i> Credly</div>
+      </div>
     </a>
 
   </div>
 </section>
 
+<!-- ══ FOOTER ══ -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-left">
+      <span class="footer-dot"></span>
+      <span class="footer-name">ZAMBO Alfred Yohann E.</span>
+      <span class="footer-sep">—</span>
+      <span class="fr">Ingénieur SysOps &amp; NoC</span>
+      <span class="en">SysOps &amp; NoC Engineer</span>
+    </div>
+    <div class="footer-right">
+      <span class="fr">Yaoundé, Cameroun · 2026</span>
+      <span class="en">Yaoundé, Cameroon · 2026</span>
+    </div>
+  </div>
+</footer>
+
 <script>
-// État de la langue : 'fr' par défaut
+/* ── STATE ── */
 let currentLang = 'fr';
 
+/* ── TABS ── */
 function openTab(tabId) {
-    document.querySelectorAll(".tab").forEach(tab => tab.style.display = "none");
-    document.querySelectorAll("nav button").forEach(btn => btn.classList.remove("active"));
-    document.getElementById(tabId).style.display = "block";
-    document.getElementById("nav-" + tabId).classList.add("active");
-    if (tabId === 'skills') animateSkills();
+  document.querySelectorAll('.tab').forEach(t => t.classList.remove('tab-active'));
+  document.querySelectorAll('nav button').forEach(b => b.classList.remove('active'));
+  document.getElementById(tabId).classList.add('tab-active');
+  document.getElementById('nav-' + tabId).classList.add('active');
+  if (tabId === 'skills') animateSkills();
+  triggerReveal();
 }
 
-function animateSkills() {
-    document.querySelectorAll(".skill").forEach(skill => {
-        let percent = skill.getAttribute("data-percent");
-        skill.querySelector(".progress").style.width = percent + "%";
-    });
-}
-
+/* ── LANGUE — fix: display:'' revert to CSS default ── */
 function toggleLang() {
-    currentLang = currentLang === 'fr' ? 'en' : 'fr';
-    const showLang = currentLang;
-    const hideLang = currentLang === 'fr' ? 'en' : 'fr';
-
-    document.querySelectorAll("." + showLang).forEach(el => el.style.display = "block");
-    document.querySelectorAll("." + hideLang).forEach(el => el.style.display = "none");
+  currentLang = currentLang === 'fr' ? 'en' : 'fr';
+  const hide = currentLang === 'fr' ? 'en' : 'fr';
+  document.querySelectorAll('.' + currentLang).forEach(el => el.style.display = '');
+  document.querySelectorAll('.' + hide).forEach(el => el.style.display = 'none');
+  document.getElementById('lang-label').textContent = currentLang === 'fr' ? 'EN' : 'FR';
 }
 
-// Initialisation
-openTab('about');
-// Cacher les éléments EN au démarrage
-document.querySelectorAll(".en").forEach(el => el.style.display = "none");
-</script>
+/* ── SKILLS ── */
+function animateSkills() {
+  document.querySelectorAll('.skill').forEach(skill => {
+    const bar = skill.querySelector('.progress');
+    bar.style.width = '0';
+    requestAnimationFrame(() => requestAnimationFrame(() => {
+      bar.style.width = skill.getAttribute('data-percent') + '%';
+    }));
+  });
+}
 
+/* ── COUNTERS ── */
+function animateCounters() {
+  document.querySelectorAll('.stat-num').forEach(el => {
+    const target = parseInt(el.dataset.target);
+    let count = 0;
+    const step = Math.ceil(target / 30);
+    const t = setInterval(() => {
+      count = Math.min(count + step, target);
+      el.textContent = count;
+      if (count >= target) clearInterval(t);
+    }, 40);
+  });
+}
+
+/* ── SCROLL REVEAL ── */
+function triggerReveal() {
+  if (!('IntersectionObserver' in window)) {
+    document.querySelectorAll('.reveal').forEach(el => el.classList.add('visible'));
+    return;
+  }
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.reveal').forEach(el => { el.classList.remove('visible'); obs.observe(el); });
+}
+
+/* ── PROJECT CARDS ── */
+document.querySelectorAll('.proj-toggle').forEach(btn => {
+  btn.addEventListener('click', function() {
+    const card = this.closest('.proj-card');
+    const isOpen = card.classList.contains('open');
+    document.querySelectorAll('.proj-card.open').forEach(c => c.classList.remove('open'));
+    if (!isOpen) card.classList.add('open');
+  });
+});
+document.querySelectorAll('.proj-header').forEach(hdr => {
+  hdr.addEventListener('click', function(e) {
+    if (e.target.closest('.proj-toggle')) return;
+    this.querySelector('.proj-toggle').click();
+  });
+});
+
+/* ── FILTERS ── */
+document.querySelectorAll('.pf-btn').forEach(btn => {
+  btn.addEventListener('click', function() {
+    const filter = this.dataset.filter;
+    document.querySelectorAll('.pf-btn').forEach(b => b.classList.remove('active'));
+    this.classList.add('active');
+    document.querySelectorAll('.proj-card').forEach(card => {
+      card.style.display = (filter === 'all' || (card.dataset.cat || '').includes(filter)) ? '' : 'none';
+    });
+  });
+});
+
+/* ── MATRIX BACKGROUND ── */
+(function() {
+  const canvas = document.getElementById('bg-canvas');
+  const ctx = canvas.getContext('2d');
+  const chars = '01アイウエオカキクケコ:;<>[]{}#@!';
+  const fs = 13;
+  let cols, drops;
+  function resize() {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+    cols = Math.floor(canvas.width / fs);
+    drops = Array(cols).fill(1);
+  }
+  window.addEventListener('resize', resize);
+  resize();
+  setInterval(function() {
+    ctx.fillStyle = 'rgba(7,16,31,.075)';
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+    ctx.fillStyle = 'rgba(0,212,255,.11)';
+    ctx.font = fs + 'px monospace';
+    drops.forEach((y, i) => {
+      ctx.fillText(chars[Math.floor(Math.random() * chars.length)], i * fs, y * fs);
+      if (y * fs > canvas.height && Math.random() > .975) drops[i] = 0;
+      drops[i]++;
+    });
+  }, 80);
+})();
+
+/* ── CURSOR BLINK ── */
+(function() {
+  const c = document.querySelector('.cursor');
+  if (c) setInterval(() => c.style.opacity = c.style.opacity === '0' ? '1' : '0', 600);
+})();
+
+/* ── INIT ── */
+openTab('about');
+document.querySelectorAll('.en').forEach(el => el.style.display = 'none');
+animateCounters();
+</script>
 </body>
 </html>
