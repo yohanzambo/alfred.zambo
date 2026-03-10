@@ -427,6 +427,7 @@ nav button i { font-size: 12px; }
 .tt-auto { background: rgba(168,85,247,.06); border-color: rgba(168,85,247,.18); color: #d8b4fe; }
 .tt-sys  { background: rgba(0,212,255,.04);  border-color: rgba(0,212,255,.14);  color: #7dd3fc; }
 .tt-mon  { background: rgba(249,115,22,.06); border-color: rgba(249,115,22,.18); color: #fdba74; }
+.tt-key  { font-weight: 700; box-shadow: 0 0 6px rgba(0,212,255,.2); border-width: 1.5px; filter: brightness(1.25); }
 
 .skill-meta {
   display: flex; justify-content: space-between;
