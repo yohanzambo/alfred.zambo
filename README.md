@@ -1,7 +1,7 @@
 # ZAMBO Alfred Yohann — Portfolio
 
-> Personal portfolio of **ZAMBO Alfred Yohann E.**, SysOps & NoC Engineer at ANTIC (Cameroon).
-> Live at: **[https://yourusername.github.io](https://yourusername.github.io)**
+> Personal portfolio of **ZAMBO Alfred Yohann E.**, Network & System Engineer at ANTIC (Cameroon).
+> Live at: **Yaoundé**
 
 ---
 
