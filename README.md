@@ -96,5 +96,3 @@ SysOps & NoC Engineer — ANTIC, Yaoundé, Cameroon
 [LinkedIn](https://linkedin.com/in/alfred-y-zambo-8359311a1) · [Email](mailto:yohanzambo.28@gmail.com) · [WhatsApp](https://wa.me/237694904503)
 
 ---
-
-*Cellule des Systèmes d'Information — © 2026 ANTIC*
